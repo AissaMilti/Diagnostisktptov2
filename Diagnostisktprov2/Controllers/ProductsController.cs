@@ -23,11 +23,11 @@ namespace Diagnostisktprov2.Controllers
         }
 
         // GET: Products
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             _logger.LogWarning("With great powers comes great responsibilities");
 
-            return View( _context.Products.ToListAsync());
+            return View(await _context.Products.ToListAsync());
         }
 
         // GET: Products/Details/5
