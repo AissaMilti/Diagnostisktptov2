@@ -37,7 +37,7 @@
                     <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
                     <li><a asp-area="" asp-controller="Products" asp-action="Index">Products</a></li>
-                    <li>(@HostingEnvironment.EnvironmentName)</li>
+                    <li style="color: white">@HostingEnvironment.EnvironmentName </li>
                 </ul>
                 @await Html.PartialAsync("_LoginPartial")
             </div>
@@ -46,9 +46,11 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
+        @*<footer>
             <p>&copy; 2017 - Diagnostisktprov2</p>
-        </footer>
+        </footer>*@
+        @Html.Partial("_FooterPartial")
+
     </div>
 
     <environment include="Development">
